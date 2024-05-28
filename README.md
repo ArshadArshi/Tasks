@@ -1,3 +1,9 @@
+I have created a multiples tasks using React framework and it consists of Hooks , Props destructuring , Context API , CRUD operations using fetch and axios , Redux concept of request response
+I have used multiple packages fro Drag and Drop , Bootstrap , Material UI , firebase Db and React-toast 
+
+So using this code make sure to change the Index.js file with each one of App files to see the output while running
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
