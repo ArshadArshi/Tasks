@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .progress-bar{
+        position: relative;
+        width: 300px;
+        height: 40px;
+        border: 1px solid black;
+    }
+    .progress-bar-fill{
+        height: 100%;
+        background: #59ea63;
+        transition: width 0.5s;
+    }
+    .progress-bar-value{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <div id="my"></div>
+    <h1 id="title">Progress Bar</h1>
+    <div class="progress-bar">
+        <div class="progress-bar-value">65%</div>
+        <div class="progress-bar-fill"></div>
+    </div>
+    <p id="para">Ill write some text</p>
+    <ul class="para" id="list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Tomato</li>
+    </ul>
+</body>
+<script src="dom.js">
+   
+</script>
+</html>
