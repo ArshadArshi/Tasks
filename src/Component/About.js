@@ -19,7 +19,7 @@ const About = () => {
               by making himself as a unforgettable person in the world 
           </p>
           <p>Never beg anyone for anything because everyone has their own problem so that no one will "HELP" you
-              <span>-ARSHAD</span>
+              <span>-ARSHAD MUBARAk</span>
           </p>
           </div>
       </div>
