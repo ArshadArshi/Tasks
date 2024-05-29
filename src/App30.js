@@ -31,7 +31,7 @@ const App30 = ({cartCount,cartItems,total,setCartCount,setCartItems,setTotal}) =
             }
         }))
         setCartCount(prevCount=>prevCount + 1)
-        setTotal(currentTot=>currentTot + price)
+        setTotal(currentTot=>Math.round(currentTot + price))
     }
 
     const Inc = (id,price) => {
@@ -42,7 +42,7 @@ const App30 = ({cartCount,cartItems,total,setCartCount,setCartItems,setTotal}) =
             }
         }))
         setCartCount(prevCount=>prevCount + 1)
-        setTotal(currentTot=> currentTot + price)
+        setTotal(currentTot=> Math.round(currentTot + price))
     }
 
     const Dec = (id,price) => {
@@ -54,13 +54,19 @@ const App30 = ({cartCount,cartItems,total,setCartCount,setCartItems,setTotal}) =
                 }
             }))
             setCartCount(prevCount => prevCount - 1)
-            setTotal(currentTot=> currentTot - price)
-        }else{
+            setTotal(currentTot=>Math.round(Math.max(currentTot - price,0)))
+        }
+        else{
             const{[id]: _ ,...rest} = cartItems
             setCartItems(rest)
-            setCartCount(prevCount=>prevCount - 1)
-            setTotal(currentTot=>currentTot - price)
+            setCartCount(prevCount=>prevCount - 1) 
+            setTotal(currentTot=>Math.round(Math.max(currentTot - price,0)))
         }
+        setTimeout(() => {
+            if (Object.values(cartItems).every(item => item.quantity === 0)) {
+                setTotal(0);
+            }
+        }, 0);
     }
     
   return (
@@ -73,7 +79,7 @@ const App30 = ({cartCount,cartItems,total,setCartCount,setCartItems,setTotal}) =
         <div className='product-item' key={product.id}>
             <img src={product.thumbnail} alt="" />
             <p>{product.title}</p>
-            <p>${product.price}/-</p>
+            <p>${Math.round(product.price)}/-</p>
             {
                 cartItems[product.id] ? (
                     <div style={{display:'flex',gap:'15px'}}>
