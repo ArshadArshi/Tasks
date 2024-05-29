@@ -14,7 +14,7 @@ const Main = () => {
         <Routes>
           <Route path='/' element={<App30 cartCount={cartCount} setCartCount={setCartCount} cartItems={cartItems} setCartItems={setCartItems} total={total} setTotal={setTotal} />} />
           <Route path='/viewCart' element={<ViewCart cartCount={cartCount} cartItems={cartItems} total={total} />} >
-          <Route path='profile' element={<Profile/>} />
+            <Route path='profile' element={<Profile />} />
           </Route>
         </Routes>
       </BrowserRouter>
