@@ -1,3 +1,5 @@
+To run React app use "npm run client" and to run localhost server.js use "npm run server"
+
 I have created a multiples tasks using React framework and it consists of Hooks , Props destructuring , Context API , CRUD operations using fetch and axios , Redux concept of request response
 I have used multiple packages fro Drag and Drop , Bootstrap , Material UI , firebase Db and React-toast 
 
